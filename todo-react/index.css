@@ -1,0 +1,169 @@
+/* =========================
+   RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* =========================
+   LIGHT PASTEL BACKGROUND
+   (NO backdrop-filter dependency)
+========================= */
+body {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  color: #3b3b3b;
+
+  /* soft pastel gradient */
+  background: linear-gradient(-45deg,
+    #fff1f7,
+    #e8f5ff,
+    #f3f0ff,
+    #eafff3
+  );
+  background-size: 400% 400%;
+  animation: gradientMove 14s ease infinite;
+}
+
+/* animated gradient */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* =========================
+   ROOT
+========================= */
+#root {
+  min-height: 100vh;
+}
+
+/* =========================
+   CARD (glass-like but SAFARI SAFE)
+   (no heavy backdrop-filter)
+========================= */
+.card {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 18px;
+
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+/* =========================
+   HEADINGS
+========================= */
+h1, h2, h3 {
+  color: #2f2f2f;
+  letter-spacing: 0.3px;
+}
+
+/* =========================
+   BUTTON (soft pastel UI)
+========================= */
+button {
+  font-family: inherit;
+}
+
+.btn {
+  background: linear-gradient(135deg, #a8d8ff, #cbb6ff);
+  border: none;
+  color: #fff;
+
+  padding: 10px 18px;
+  border-radius: 12px;
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* =========================
+   INPUTS
+========================= */
+input, textarea, select {
+  outline: none;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 10px;
+  padding: 10px;
+
+  background: rgba(255,255,255,0.9);
+  color: #333;
+}
+
+/* =========================
+   LINKS
+========================= */
+a {
+  color: #6c63ff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   SECTION SPACING
+========================= */
+.section {
+  margin-bottom: 40px;
+}
+
+/* =========================
+   FADE ANIMATION
+========================= */
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   SCROLLBAR (light theme)
+========================= */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c9c9c9;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
